@@ -13,9 +13,15 @@ namespace TrashSnap
         public float Longitude { get; set; }
         public float Latitude { get; set; }
         public string Text { get; set; }
-        public byte[] Photo { get; set; }
-        public Stream PhotoStream { get; set; } // Not sure yet whether it's gonna be a stream or a byte[]
-        public String PhotoId;
+        public byte[] Photo { 
+            set
+            {
+                PhotoStream = new MemoryStream(value);
+                this.PhotoId = Guid.NewGuid().ToString("N");
+            }
+        }
+        public Stream PhotoStream { get; set; }
+        public string PhotoId;
 
         /// <summary>
         /// Vrne čas vnosa kot string, v formatu YYYY-MM-DD HH:MM:SS. (za API)
@@ -32,7 +38,7 @@ namespace TrashSnap
         /// </summary>
         public DateTime TimeDate {  get; set; }
         
-        public Entry() { }
+        public Entry() { this.TimeDate = DateTime.Now; }
         public Entry(string text, float longitude, float latitude, byte[] photo) : this(text, longitude, latitude, photo, DateTime.Now) { }
         public Entry(string text, float longitude, float latitude, byte[] photo, DateTime time)
         {
@@ -41,7 +47,6 @@ namespace TrashSnap
             this.Latitude = latitude;
             this.Photo = photo;
             this.TimeDate = time;
-            this.PhotoId = Guid.NewGuid().ToString("N");
         }
 
         public Dictionary<string, string> Values()

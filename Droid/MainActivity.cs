@@ -8,8 +8,7 @@ using Android.Hardware;
 using Android.Graphics;
 using Android.Hardware.Camera2;
 using Android.Hardware.Camera2.Params;
-
-
+using Java.Interop;
 
 namespace TrashSnap.Droid
 {
@@ -20,19 +19,16 @@ namespace TrashSnap.Droid
 	{
 		Android.Hardware.Camera _camera;
 		TextureView _textureView;
-		Button _takePicture;
+        Entry entry;
 
-		protected override void OnCreate (Bundle bundle)
+        protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Main);
 
 			_textureView = FindViewById<TextureView> (Resource.Id.textureView1);
 			_textureView.SurfaceTextureListener = this;
-
-			_takePicture = FindViewById<Button> (Resource.Id.but2);
-
-			_takePicture.Click += CaptureImage;
+            
 
 
 			_textureView.SurfaceTextureListener = this;
@@ -89,9 +85,13 @@ namespace TrashSnap.Droid
 			camera.StartPreview();
 		}
 
-
-		public void CaptureImage(object sender, EventArgs e) {
+        [Export("CaptureImage")]
+        public void CaptureImage(View v) {
 			Bitmap bm = _textureView.Bitmap;
+            entry = new Entry("Test", 46f, 14.6f, bm.ToByteArray());
+            API.UploadPhoto(entry);
+            //entry.Photo = bm.ToByteArray();
+            
 		}
 
 
@@ -115,7 +115,6 @@ namespace TrashSnap.Droid
 		}
 		public void OnSurfaceTextureSizeChanged (Android.Graphics.SurfaceTexture oSurface, int iWidth, int iHeight)
 		{
-			
 		}
 		public void OnSurfaceTextureUpdated (Android.Graphics.SurfaceTexture oSurface)
 		{
