@@ -6,6 +6,7 @@ namespace TrashSnap
 	{
 		public MyClass ()
 		{
+			
 		}
 	}
 }

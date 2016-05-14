@@ -1,14 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-<Button  
-    android:id="@+id/myButton"
-    android:layout_width="match_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
-</LinearLayout>
-
+    android:id="@+id/relativeLayout1"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <TextureView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textureView1" />
+    </FrameLayout>
+    <Button
+        android:id="@+id/but2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take picture"
+        android:gravity="center"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android_marginLeft="5dp" />
+</RelativeLayout>
