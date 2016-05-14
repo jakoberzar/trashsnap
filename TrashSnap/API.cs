@@ -21,7 +21,7 @@ namespace TrashSnap
         /// </summary>
         /// <param name="entry"></param>
         /// <returns>Uspeh</returns>
-        static bool UploadEntry(Entry entry)
+        public static bool UploadEntry(Entry entry)
         {
             try
             {

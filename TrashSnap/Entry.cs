@@ -4,6 +4,9 @@ using System.Text;
 
 namespace TrashSnap
 {
+    /// <summary>
+    /// Predstavlja en "vnos", ki se bo poslal na server; vključuje text, photo, time, in lokacijo.
+    /// </summary>
     public class Entry
     {
         public float Longitude { get; set; }
@@ -43,6 +46,7 @@ namespace TrashSnap
             d.Add("longitude", Longitude.ToString());
             d.Add("latitude", Latitude.ToString());
             d.Add("text", Text);
+            d.Add("time", Time);
             return d;
         }
     }
