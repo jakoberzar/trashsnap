@@ -92,6 +92,7 @@ namespace TrashSnap.Droid
 
 		public void CaptureImage(object sender, EventArgs e) {
 			Bitmap bm = _textureView.Bitmap;
+
 		}
 
 

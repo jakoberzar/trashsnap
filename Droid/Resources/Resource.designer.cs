@@ -47,6 +47,9 @@ namespace TrashSnap.Droid
 			// aapt resource value: 0x7f060002
 			public const int but2 = 2131099650;
 			
+			// aapt resource value: 0x7f060003
+			public const int imageView1 = 2131099651;
+			
 			// aapt resource value: 0x7f060000
 			public const int relativeLayout1 = 2131099648;
 			
@@ -68,6 +71,9 @@ namespace TrashSnap.Droid
 			
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Preview = 2130903041;
 			
 			static Layout()
 			{
@@ -122,6 +128,9 @@ namespace TrashSnap.Droid
 			
 			// aapt resource value: 0x7f050000
 			public const int MyTheme = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int MyTheme2 = 2131034113;
 			
 			static Style()
 			{

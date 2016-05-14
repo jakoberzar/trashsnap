@@ -4,4 +4,8 @@
       <item name="android:windowFullscreen">true</item> 
       <item name="android:actionBarSize">0dp</item>
    </style>
+
+
+   <style name="MyTheme2" parent="@android:Theme.Holo">
+   </style>
 </resources>
