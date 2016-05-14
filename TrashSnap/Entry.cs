@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace TrashSnap
@@ -13,6 +14,8 @@ namespace TrashSnap
         public float Latitude { get; set; }
         public string Text { get; set; }
         public byte[] Photo { get; set; }
+        public Stream PhotoStream { get; set; } // Not sure yet whether it's gonna be a stream or a byte[]
+        public String PhotoId;
 
         /// <summary>
         /// Vrne čas vnosa kot string, v formatu YYYY-MM-DD HH:MM:SS. (za API)
@@ -38,6 +41,7 @@ namespace TrashSnap
             this.Latitude = latitude;
             this.Photo = photo;
             this.TimeDate = time;
+            this.PhotoId = Guid.NewGuid().ToString("N");
         }
 
         public Dictionary<string, string> Values()
@@ -47,6 +51,7 @@ namespace TrashSnap
             d.Add("latitude", Latitude.ToString());
             d.Add("text", Text);
             d.Add("time", Time);
+            d.Add("id", PhotoId);
             return d;
         }
     }
