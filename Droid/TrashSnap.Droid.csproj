@@ -69,6 +69,7 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\Preview.axml" />
+    <AndroidResource Include="Resources\drawable\snap_button.png" />
   </ItemGroup>
   <Import Project="..\TrashSnap\TrashSnap.projitems" Label="Shared" Condition="Exists('..\TrashSnap\TrashSnap.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
@@ -78,5 +79,6 @@
     <Folder Include="Resources\mipmap-xhdpi\" />
     <Folder Include="Resources\mipmap-xxhdpi\" />
     <Folder Include="Resources\mipmap-xxxhdpi\" />
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
 </Project>

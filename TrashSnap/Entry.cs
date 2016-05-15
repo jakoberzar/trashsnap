@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Android.Graphics;
 
 namespace TrashSnap
 {
@@ -13,6 +14,8 @@ namespace TrashSnap
         public float Longitude { get; set; }
         public float Latitude { get; set; }
         public string Text { get; set; }
+		public static Bitmap photo;
+
         public byte[] Photo { 
             set
             {

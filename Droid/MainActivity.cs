@@ -9,6 +9,7 @@ using Android.Graphics;
 using Android.Hardware.Camera2;
 using Android.Hardware.Camera2.Params;
 using Java.Interop;
+using Android.Content;
 
 namespace TrashSnap.Droid
 {
@@ -88,35 +89,13 @@ namespace TrashSnap.Droid
         [Export("CaptureImage")]
         public void CaptureImage(View v) {
 			Bitmap bm = _textureView.Bitmap;
-            entry = new Entry("Test", 46f, 14.6f, bm.ToByteArray());
-            API.UploadPhoto(entry);
+			Entry.photo = bm;
+			var activity2 = new Intent (this, typeof(PreviewActivity));
+			StartActivity (activity2);
+
 		}
 
 
-	}
-
-
-	public class CameraSurfaceTextureListener : Java.Lang.Object, TextureView.ISurfaceTextureListener
-	{
-		private MainActivity Activity;
-		public CameraSurfaceTextureListener(MainActivity oActivity)
-		{
-			Activity = oActivity;
-		}
-		public void OnSurfaceTextureAvailable (Android.Graphics.SurfaceTexture oSurface, int iWidth, int iHeight)
-		{
-			
-		}
-		public bool OnSurfaceTextureDestroyed (Android.Graphics.SurfaceTexture oSurface)
-		{
-			return true;
-		}
-		public void OnSurfaceTextureSizeChanged (Android.Graphics.SurfaceTexture oSurface, int iWidth, int iHeight)
-		{
-		}
-		public void OnSurfaceTextureUpdated (Android.Graphics.SurfaceTexture oSurface)
-		{
-		}
 	}
 
 		

@@ -41,20 +41,54 @@ namespace TrashSnap.Droid
 			}
 		}
 		
+		public partial class Drawable
+		{
+			
+			// aapt resource value: 0x7f020000
+			public const int snap_button = 2130837504;
+			
+			static Drawable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Drawable()
+			{
+			}
+		}
+		
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060002
-			public const int but2 = 2131099650;
+			// aapt resource value: 0x7f070009
+			public const int btn4 = 2131165193;
 			
-			// aapt resource value: 0x7f060003
-			public const int imageView1 = 2131099651;
+			// aapt resource value: 0x7f070003
+			public const int but2 = 2131165187;
 			
-			// aapt resource value: 0x7f060000
-			public const int relativeLayout1 = 2131099648;
+			// aapt resource value: 0x7f070008
+			public const int editText1 = 2131165192;
 			
-			// aapt resource value: 0x7f060001
-			public const int textureView1 = 2131099649;
+			// aapt resource value: 0x7f070006
+			public const int frameLayout1 = 2131165190;
+			
+			// aapt resource value: 0x7f070004
+			public const int frameLayout2 = 2131165188;
+			
+			// aapt resource value: 0x7f070007
+			public const int gridLayout1 = 2131165191;
+			
+			// aapt resource value: 0x7f070005
+			public const int imageView1 = 2131165189;
+			
+			// aapt resource value: 0x7f070000
+			public const int relativeLayout1 = 2131165184;
+			
+			// aapt resource value: 0x7f070002
+			public const int relativeLayout2 = 2131165186;
+			
+			// aapt resource value: 0x7f070001
+			public const int textureView1 = 2131165185;
 			
 			static Id()
 			{
@@ -69,11 +103,11 @@ namespace TrashSnap.Droid
 		public partial class Layout
 		{
 			
-			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			// aapt resource value: 0x7f040000
+			public const int Main = 2130968576;
 			
-			// aapt resource value: 0x7f030001
-			public const int Preview = 2130903041;
+			// aapt resource value: 0x7f040001
+			public const int Preview = 2130968577;
 			
 			static Layout()
 			{
@@ -88,8 +122,8 @@ namespace TrashSnap.Droid
 		public partial class Mipmap
 		{
 			
-			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			// aapt resource value: 0x7f030000
+			public const int Icon = 2130903040;
 			
 			static Mipmap()
 			{
@@ -104,14 +138,14 @@ namespace TrashSnap.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int app_name = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int hello = 2131034112;
 			
-			// aapt resource value: 0x7f040002
-			public const int openCamera = 2130968578;
+			// aapt resource value: 0x7f050002
+			public const int openCamera = 2131034114;
 			
 			static String()
 			{
@@ -126,11 +160,11 @@ namespace TrashSnap.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int MyTheme = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int MyTheme = 2131099648;
 			
-			// aapt resource value: 0x7f050001
-			public const int MyTheme2 = 2131034113;
+			// aapt resource value: 0x7f060001
+			public const int MyTheme2 = 2131099649;
 			
 			static Style()
 			{

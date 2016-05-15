@@ -7,5 +7,6 @@
 
 
    <style name="MyTheme2" parent="@android:Theme.Holo">
+   	<item name="android:actionBarSize">0dp</item>
    </style>
 </resources>
